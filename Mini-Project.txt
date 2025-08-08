@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<HTML>
+    <Title>
+        Disney+Hostar
+    </Title>
+    <Head>
+        <link rel="icon" href="logo.png">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </Head>
+    <Head>
+        <Style>
+            Body{
+                background-color: black;
+            }
+        </Style>
+        <Style>
+            .slidebar{
+            width:200px;
+            border:2px;
+            margin:15px;
+        }
+        .slidebar{
+            position: fixed;
+            width: 80px;
+            height: 100vh;
+            background-color: rgb(6, 6, 6);
+            backdrop-filter: blur(15px);
+            border-right: 1px solid rgb(21, 3, 3);
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        .slidebar:hover{
+                   width: 250px;
+        }
+        .slidebar-nav{
+            padding: 20px 0;
+            list-style: none;
+        }
+        .nav-item{
+            position: relative;
+            padding: 15px 25px;
+            margin: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .nav-item:hover{
+            background: rgb(56, 56, 56);
+            transform: translateX(10px);
+        }
+
+        .nav-item{
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            margin-right: 20px;
+            width: 25px;   
+        }
+        .nav-item span{
+            color:#ffffff;
+            font-size: 0.9em;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .slidebar:hover .nav-item span{
+            opacity: 1;
+        }
+        .nav-item::before{
+            content:'';
+            position:absolute;
+            left:0;
+            top:0;
+            width:3px;
+            height:100%;
+            background:white;
+            transform:scaleY(0);
+            transition: transform 0.3s;
+        }
+        .nav-item:hover::before{
+            transform: scaleY(1);
+        }
+        .four{
+            margin: 0px;
+            padding-top: 14px;
+            padding-left: 23px;
+            padding-right: 0px;
+        }
+        </Style>
+      <style>
+    .video-container {
+      position: flex;
+      margin-left: 10px;
+      width: 1600px;
+      height: 500px;
+    }
+
+    video {
+      height: 100%;
+      width: 80%;
+      display: block;
+    }
+    .volume-button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 20px;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+
+  <style>
+    .scroll-container {
+      display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+      overflow-x: auto;
+      scroll-behavior: smooth; 
+      gap: 8px;
+      padding: 5px;
+    }
+
+    .scroll-container img {
+      width: 180px;
+      height: 220px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .scroll-container {
+      scrollbar-width: none;
+           
+    }
+      .overlay-text {
+      position: absolute;
+      top: 50%;
+      bottom: 80px;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 30px;
+      font-family: Arial, sans-serif;
+      text-align: left;
+      opacity: 0; 
+      transition: opacity 0.3s ease;
+    }
+    .video-container:hover .overlay-text {
+      opacity: 1;
+    }
+  </style>
+  <Style>
+    H3{
+      height: 8vh;
+      width: 30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      color: #f5f9ff;
+    }
+    .glow-button{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: transparent;
+      border:0.5px solid rgb(1, 255, 128);
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+    }
+  </Style>
+    </Head>
+    <Body>
+        <div class="slidebar">
+            <img src="disney.png" alt="Disney" width="82px" height="30px">
+            <ul class="slidebar-nav">
+                <li class="nav-item">
+                    <a href="Mini-Project.html"><i class="fas fa-home" style="color: #f5f9ff;"></i></a>
+                    <span><b>Home</b></span>
+                </li>
+                 <li class="nav-item">
+                    <a href="Search.html"><i class="fa-solid fa-magnifying-glass" style="color: #f5f9ff;"></i></a>
+                    <span><b>Search</b></span>
+                </li>
+                <li class="nav-item">
+                  <a href="Mini-Project.html"><i class="fa-solid fa-tv" style="color: #f5f9ff;"></i></a>
+                    <span><b>Tv</b></span>
+                </li>
+                 <li class="nav-item">
+                    <a href="Mini-Project.html"><i class="fa-solid fa-clapperboard" style="color: #f5f9ff;"></i></a>
+                    <span><b>Movies</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-person-running" style="color: #f5f9ff;"></i>
+                    <span><b>Sports</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-video" style="color: #f5f9ff;"></i>
+                    <span><b>Sparks</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-list" style="color: #f5f9ff;"></i>
+                    <span><b>Categories</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-brands fa-wolf-pack-battalion" style="color: #f5f9ff;"></i>
+                    <span><b>My Space</b></span>
+                </li>
+            </ul>
+        </div>
+    <body>
+  <div class="video-container" style="margin-right: 500px;" style="max-width: 1800px;" style="max-height: 1800px">
+    <video id="video" autoplay muted loop>
+      <source src="RRR.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-text" id="overlayText"><H6>Under The British Raj, two revolution aries with personal agends forge a friendship, only to find each other on opposing sides.<br></H6><H5>Action | Drama | Buddy | Historical</H5><H3><a href="https://www.hotstar.com/in/movies/rrr/1260108121/watch"><Button class="glow-button">Watch Now</Button></H3></a></div>
+    <button class="volume-button" onclick="unmuteVideo()" id="volumeBtn">🔈</button>
+  </div>
+  <script>
+    const video = document.getElementById('video');
+    const volumebtn = document.getElementById('volumeBtn');
+
+    function unmuteVideo() {
+      video.muted = !video.muted;
+      volumebtn.textContent = video.muted ? '🔈' : '🔊';
+    }
+  </script>
+<script>
+  const videoContainer = document.getElementById('videoContainer');
+  const overlayText = document.getElementById('overlayText');
+  videoContainer.addEventListener('mouseenter', () => {
+    overlayText.style.opacity = '1'; 
+  });
+  videoContainer.addEventListener('mouseleave', () => {
+    overlayText.style.opacity = '0'; 
+  });
+</script>
+</body>
+ </div>
+ <div style="margin-left: 130px;">
+  <H2 Style="color: rgb(255, 255, 255);"><B>Action Movies</B></H2>
+ </div>
+ <div class="scroll-container" style="margin-left: 120px;">
+    <a href="https://www.hotstar.com/in/movies/salaar-part-1-ceasefire/1260170331/watch"><img src="Salaar.png" alt="Image 1"></a>
+    <a href="https://www.hotstar.com/in/movies/evanukku-sariyana-aalu-illai/1260049493/watch"><img src="Super.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/movies/ungalukkaga-oruvan/1260046299/watch"><img src="Fav.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/movies/vinaya-vidheya-rama/1260009604/watch"><img src="Ram.png" alt="Image 3"></a>
+    <a href="https://www.hotstar.com/in/movies/rrr/1260108121/watch"><img src="RRR.png" alt="Image 4"></a>
+    <a href="https://www.hotstar.com/in/movies/magadheera/1260008895/watch"><img src="Mahadheera.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/movies/maari-2/1000228200/watch"><img src="Marrie.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/movies/bharath-ennum-naan/1100014734/watch"><img src="Bharat.png" alt="Image 5"></a>
+  </div>
+  <div style="margin-left: 130px;"></div>
+  <div style="margin-left: 130px;">
+  <H2 Style="color: rgb(255, 255, 255);"><B>Serials</B></H2>
+ </div>
+ <div class="scroll-container" style="margin-left: 120px;">
+    <a href="https://www.hotstar.com/in/shows/siragadikka-aasai/1260129356/the-constable-reveals-muthus-innocence/1700069279/watch"><img src="image1.png" alt="Image 1"></a>
+    <a href="https://www.hotstar.com/in/shows/pandian-stores-2/1260000603/thangamayil-feels-devastated/1700069314/watch"><img src="image2.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/shows/mahanadhi/1260129361/pasupathy-manipulates-vennila/1700069200/watch"><img src="image3.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/shows/adhisaya-piraviyum-arpudha-pennum/1260020212/adhisaya-piraviyum-arpudha-pennum/1100034631/watch"><img src="image4.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/shows/ayyanar-thunai/1271388570/nila-under-scrutiny/1700069280/watch"><img src="image5.png" alt="Image 3"></a>
+    <a href="https://www.hotstar.com/in/shows/radha-krishna/1260002518/radha-krishna/1100013114/watch"><img src="image6.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/shows/mahabharatham/1877/mahabharatham/1000036883/watch"><img src="image7.png" alt="Image 5"></a>
+  </div>
+  <div style="margin-left: 130px;">
+  <H2 Style="color: rgb(255, 255, 255);"><B>Cartoons</B></H2>
+ </div>
+ <div class="scroll-container" style="margin-left: 120px;">
+    <a href="https://www.hotstar.com/in/shows/doraemon/1260021004/space-simulator-a-passionate-fan-letter-to-gian/1271316304/watch"><img src="1.png" alt="Image 1"></a>
+    <a href="https://www.hotstar.com/in/shows/motu-patlu/1971003164/motu-patlu/1971079094/watch"><img src="2.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/shows/golmaal-jr/1971003165/golmaal-jr/1971037083/watch"><img src="3.png" alt="Image 5"></a>
+    <a href="https://www.hotstar.com/in/movies/the-aristocats/1260018144/watch"><img src="4.png" alt="Image 3"></a>
+    <a href="https://www.hotstar.com/in/shows/the-lion-kings-timon-and-pumbaa/1260015081/the-lion-kings-timon-and-pumbaa/1260018786/watch"><img src="5.png" alt="Image 4"></a>
+    <a href="https://www.hotstar.com/in/shows/dragons-the-nine-realms/1971003069/dragons-the-nine-realms/1971036763/watch"><img src="6.png" alt="Image 5"></a>
+  </div>
+    </Body> 
+</HTML>
